@@ -6,7 +6,7 @@ export default class BackButton extends Component {
 	render() {
 		return (
 			<>
-				<Link to={"/"}>
+				<Link to={"/home"}>
 					<button className="back-button">
 						<span>Home</span>
 					</button>

@@ -11,18 +11,9 @@ body {
 	min-width: 320px;
 }
 
-nav,
 footer {
 	padding: 1% 0;
 	background-color: #aaa;
-}
-
-nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
 }
 
 header {
@@ -39,6 +30,7 @@ section {
 }
 
 button {
+	display: inline-block;
 	margin-bottom: 50px;
 	height: 3.5rem;
 	width: 7.5rem;
@@ -100,44 +92,31 @@ label {
 	width: 100%;
 }
 
-label p {
-	margin: 6px 0 23px;
-}
-
-form {
-	text-align: left;
-}
-
-label {
+.login-div {
 	display: block;
+	text-align: center;
 }
 
-.form-section {
-	margin-bottom: 30px;
+.login-form {
+	display: inline-block;
 }
 
-.button-section {
-	padding: 0 0 0 15px;
+.signup-div {
+	display: block;
+	text-align: center;
 }
 
-.form-section input,
-.form-section textarea {
-	width: 100%;
+.signup-form {
+	display: inline-block;
 }
 
-button {
-	margin-bottom: 50px;
+.positive-statement-div {
+	display: flex;
+	text-align: center;
 }
 
-.form-section {
-	margin-bottom: 30px;
-}
-
-.button-section {
-	padding: 0 0 0 15px;
-}
-
-.form-section input,
-.form-section textarea {
-	width: 100%;
+.positive-statement-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
