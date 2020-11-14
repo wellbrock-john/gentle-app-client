@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import LogoutButton from "../LogoutButton";
 
 class HomePage extends Component {
 	render() {
 		return (
 			<>
 				<header role="banner">
+					<LogoutButton />
+					<h1>Gentle</h1>
+					<h3>Welcome to your homepage, "User"</h3>
 					<Link to={"/treasure"}>
 						<button className="hidden-treasure">
 							<span>Treasure</span>
 						</button>
 					</Link>
-					<h1>Gentle</h1>
-					<h3>Welcome to your homepage, "User"</h3>
 				</header>
 				<section>
 					<h4>This Is Your Space</h4>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BackButton from "../BackButton";
+import LogoutButton from "../LogoutButton";
 
 class Notes extends Component {
 	render() {
@@ -7,6 +8,7 @@ class Notes extends Component {
 			<>
 				<header role="banner">
 					<BackButton />
+					<LogoutButton />
 					<h1>Talking Points</h1>
 					<h3>
 						Allow yourself to feel free of cluttered thoughts. If something is
@@ -15,12 +17,14 @@ class Notes extends Component {
 					</h3>
 				</header>
 				<section>
-					<form class="signup-form">
-						<section class="form-section">
+					<form className="signup-form">
+						<section className="form-section">
 							<header>
 								<h3>A Gentle Reminder</h3>
 							</header>
-							<label for="gentle-reminder">I would like to talk about...</label>
+							<label htmlFor="gentle-reminder">
+								I would like to talk about...
+							</label>
 							<textarea name="gentle-reminder" rows="15" required></textarea>
 						</section>
 						<button type="submit">Save</button>

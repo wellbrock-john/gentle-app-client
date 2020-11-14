@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import BackButton from "../BackButton";
+import LogoutButton from "../LogoutButton";
 
 class Treasure extends Component {
+	//add state with value called isOpened
 	render() {
+		//write a func that returns a template with an if statement
+		//write a func called changed touch that with change state to true
 		return (
 			<>
 				<header role="banner">
 					<BackButton />
+					<LogoutButton />
 					<h1>Gentle</h1>
 					<h2>Feel safe. Be you.</h2>
 				</header>
@@ -22,7 +27,7 @@ class Treasure extends Component {
 					<button>This will be a treasure icon</button>
 				</section>
 				<section>
-					<div>
+					<div id="treasures-element">
 						<p>
 							This list will only populate the page after the button is clicked.
 						</p>
