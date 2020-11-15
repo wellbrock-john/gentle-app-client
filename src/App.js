@@ -11,11 +11,14 @@ import Treasure from "./components/routes/Treasure";
 import Notes from "./components/routes/Notes";
 import PositiveStatement from "./components/routes/PositiveStatement";
 import Vent from "./components/routes/Vent";
+import TokenService from "../src/services/token-service";
 
-const { API_TOKEN, API_ENDPOINT } = require("./config");
+const { API_ENDPOINT } = require("./config");
 
 class App extends Component {
 	state = {
+		user_id: null,
+		showPositiveStatements: false,
 		positivestatements: [],
 		notes: [],
 		addNote: (newNote) => {
@@ -29,6 +32,24 @@ class App extends Component {
 				],
 			});
 		},
+		handleToggleClick: (e) => {
+		this.setState({
+			showPositiveStatements: !this.state.showPositiveStatements,
+		}); console.log(this.state)
+	},
+	// 	PositiveStatementList: (showPositiveStatements) => {
+	// 		if ({showPositiveStatements: false,}) {
+	// 			return null;
+	// 		} else
+	// 		return (
+	// 			<ul>
+	// 				{this.state.positivestatements.map(positivestatement => {
+    //         			return <li key={`positivestatement-${positivestatement.statement_id}`}>{positivestatement.content}</li>
+    //       				})
+	// 				}
+	// 			</ul>
+	// 		)
+	// },
 		deleteNote: (noteId) => {
 			return this.setState({
 				notes: this.state.notes.filter((note) => note.id !== noteId),
@@ -42,14 +63,16 @@ class App extends Component {
 	};
 
 	componentDidMount() {
+		const { user_id } = this.state;
+		const user = { user_id: Number(user_id)};
 		const options = {
 			method: "GET",
 			headers: {
-				Authorization: `Bearer ${API_TOKEN}`,
+				Authorization: `Bearer ${TokenService.getAuthToken()}`,
 				Accept: "application/json",
 			},
 		};
-		fetch(`${API_ENDPOINT}/api/notes`, options)
+		fetch(`${API_ENDPOINT}/api/notes`, options, user)
 			.then((res) => {
 				if (!res.ok) {
 					return Promise.reject(res.statusText);
@@ -58,7 +81,7 @@ class App extends Component {
 			})
 			.then((notes) => this.setState({ notes }));
 
-		fetch(`${API_ENDPOINT}/api/positivestatements`, options)
+		fetch(`${API_ENDPOINT}/api/positivestatements`, options, user)
 			.then((res) => {
 				if (!res.ok) {
 					return Promise.reject(res.statusText);

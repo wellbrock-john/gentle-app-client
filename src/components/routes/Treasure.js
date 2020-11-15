@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import BackButton from "../BackButton";
 import LogoutButton from "../LogoutButton";
+import Context from "../../Context";
 
 class Treasure extends Component {
-	//add state with value called isOpened
+	static contextType = Context
+
 	render() {
-		//write a func that returns a template with an if statement
-		//write a func called changed touch that with change state to true
+		
 		return (
 			<>
 				<header role="banner">
@@ -24,22 +25,18 @@ class Treasure extends Component {
 						<h4>The love you have for yourself wants to be seen!</h4>
 						<h5>Click the icon below</h5>
 					</header>
-					<button>This will be a treasure icon</button>
+					<button onClick={(e) => this.context.handleToggleClick(e)}>This will be a treasure icon</button>
 				</section>
 				<section>
 					<div id="treasures-element">
-						<p>
-							This list will only populate the page after the button is clicked.
-						</p>
-						<ul>
-							<li>Statement One</li>
-							<li>Statement Two</li>
-							<li>Statement Three</li>
-							<li>Statement Four</li>
-							<li>Statement Five</li>
-							<li>Statement Six</li>
-							<li>Statement Seven</li>
-						</ul>
+						{this.context.showPositiveStatements === true &&
+							<ul>
+								{this.context.positivestatements.map(positivestatement => {
+            						return <li key={`positivestatement-${positivestatement.statement_id}`}>{positivestatement.content}</li>
+          							})
+								}
+							</ul>
+						}
 					</div>
 				</section>
 			</>

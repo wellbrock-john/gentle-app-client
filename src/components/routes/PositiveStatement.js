@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LogoutButton from "../LogoutButton";
-import { API_TOKEN, API_ENDPOINT } from "../../config";
+import { API_ENDPOINT } from "../../config";
 import Context from "../../Context";
 import TokenService from "../../services/token-service";
 
