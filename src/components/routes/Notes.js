@@ -84,6 +84,28 @@ class Notes extends Component {
 		}
 	}
 
+	// deleteNoteRequest(e) {
+	// 	e.preventDefault();
+	// 	const deleteOptions = {
+	// 		method: "DELETE",
+	// 		headers: {
+	// 			Authorization: `Bearer ${TokenService.getAuthToken()}`,
+	// 			Accept: "application/json",
+	// 			"Content-Type": "application/json",
+	// 		},
+	// 	};
+	// 	fetch(`${API_ENDPOINT}/api/notes/${note_id}`, deleteOptions)
+	// 		.then((res) => {
+	// 			if (!res.ok) return res.json().then((error) => Promise.reject(error));
+	// 		})
+	// 		.then((noContent) => {
+	// 			callback(note_id);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.error(error);
+	// 		});
+	// }
+
 	render() {
 		return (
 			<>
@@ -143,13 +165,18 @@ class Notes extends Component {
 											{":"}
 											{"  "}
 											{note.content}
-											{"          "}
+											{/* {"          "}
 											<button
 												className="delete-btn"
-												onClick={(e) => this.context.deleteNote(e)}
+												onClick={(e) =>
+													this.deleteNoteRequest(
+														note.note_id,
+														this.context.deleteNote()
+													)
+												}
 											>
 												Delete
-											</button>
+											</button> */}
 										</li>
 									);
 								})}

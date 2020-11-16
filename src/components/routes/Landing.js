@@ -9,7 +9,7 @@ class LandingPage extends Component {
 					<h1>Gentle</h1>
 					<h2>Feel safe. Be you.</h2>
 				</header>
-				<section>
+				<section className="landing-section">
 					<header>
 						<h3>When You Are Ready</h3>
 					</header>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AuthAPIService from "../../services/auth-api-service";
+import { Link } from "react-router-dom";
 
 class SignUp extends Component {
 	state = {
@@ -49,17 +50,6 @@ class SignUp extends Component {
 									/>
 								</div>
 							</fieldset>
-							<fieldset aria-label="nickname">
-								<div>
-									<label htmlFor="nickname">Nickname</label>
-									<input
-										placeholder="If you would like to be greeted by a name other than your full name, please enter it here."
-										type="text"
-										name="nickname"
-										id="nickname"
-									/>
-								</div>
-							</fieldset>
 							<fieldset aria-label="username">
 								<div>
 									<label htmlFor="username">Username</label>
@@ -93,6 +83,14 @@ class SignUp extends Component {
 									<span>Sign Up</span>
 								</button>
 							</fieldset>
+							<div>
+								<p>If you have an account already please login here:</p>
+								<Link to={"/login"}>
+									<button>
+										<span>Login</span>
+									</button>
+								</Link>
+							</div>
 						</form>
 					</div>
 				</section>

@@ -12,8 +12,6 @@ body {
 }
 
 .footer {
-	position: absolute;
-	bottom: 1%;
 	width: 100%;
 	background-color: #aaa;
 }
@@ -29,6 +27,10 @@ section {
 	background-color: #bbb;
 	padding: 0;
 	text-align: center;
+}
+
+.landing-section {
+	margin-bottom: 250px;
 }
 
 button {

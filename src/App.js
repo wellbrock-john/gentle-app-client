@@ -17,7 +17,6 @@ const { API_ENDPOINT } = require("./config");
 
 class App extends Component {
 	state = {
-		user_id: null,
 		showPositiveStatements: false,
 		positivestatements: [],
 		notes: [],
@@ -51,8 +50,6 @@ class App extends Component {
 	};
 
 	componentDidMount() {
-		// const { user_id } = this.state;
-		// const userId = { user_id: Number(user_id) };
 		const options = {
 			method: "GET",
 			headers: {
@@ -77,15 +74,6 @@ class App extends Component {
 				return res.json();
 			})
 			.then((positivestatements) => this.setState({ positivestatements }));
-
-		// fetch(`${API_ENDPOINT}/api/users/${user.id}`, options, userId)
-		// 	.then((res) => {
-		// 		if (!res.ok) {
-		// 			return Promise.reject(res.statusText);
-		// 		}
-		// 		return res.json();
-		// 	})
-		// 	.then((user) => this.setState({ user }));
 	}
 
 	render() {
