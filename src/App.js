@@ -33,26 +33,14 @@ class App extends Component {
 			});
 		},
 		handleToggleClick: (e) => {
-		this.setState({
-			showPositiveStatements: !this.state.showPositiveStatements,
-		}); console.log(this.state)
-	},
-	// 	PositiveStatementList: (showPositiveStatements) => {
-	// 		if ({showPositiveStatements: false,}) {
-	// 			return null;
-	// 		} else
-	// 		return (
-	// 			<ul>
-	// 				{this.state.positivestatements.map(positivestatement => {
-    //         			return <li key={`positivestatement-${positivestatement.statement_id}`}>{positivestatement.content}</li>
-    //       				})
-	// 				}
-	// 			</ul>
-	// 		)
-	// },
+			this.setState({
+				showPositiveStatements: !this.state.showPositiveStatements,
+			});
+			console.log(this.state);
+		},
 		deleteNote: (noteId) => {
 			return this.setState({
-				notes: this.state.notes.filter((note) => note.id !== noteId),
+				notes: this.state.notes.filter((note) => note.note_id !== noteId),
 			});
 		},
 		deletePositiveStatements: (positivestatements) => {
@@ -63,8 +51,8 @@ class App extends Component {
 	};
 
 	componentDidMount() {
-		const { user_id } = this.state;
-		const user = { user_id: Number(user_id)};
+		// const { user_id } = this.state;
+		// const userId = { user_id: Number(user_id) };
 		const options = {
 			method: "GET",
 			headers: {
@@ -72,7 +60,7 @@ class App extends Component {
 				Accept: "application/json",
 			},
 		};
-		fetch(`${API_ENDPOINT}/api/notes`, options, user)
+		fetch(`${API_ENDPOINT}/api/notes`, options)
 			.then((res) => {
 				if (!res.ok) {
 					return Promise.reject(res.statusText);
@@ -81,7 +69,7 @@ class App extends Component {
 			})
 			.then((notes) => this.setState({ notes }));
 
-		fetch(`${API_ENDPOINT}/api/positivestatements`, options, user)
+		fetch(`${API_ENDPOINT}/api/positivestatements`, options)
 			.then((res) => {
 				if (!res.ok) {
 					return Promise.reject(res.statusText);
@@ -89,6 +77,15 @@ class App extends Component {
 				return res.json();
 			})
 			.then((positivestatements) => this.setState({ positivestatements }));
+
+		// fetch(`${API_ENDPOINT}/api/users/${user.id}`, options, userId)
+		// 	.then((res) => {
+		// 		if (!res.ok) {
+		// 			return Promise.reject(res.statusText);
+		// 		}
+		// 		return res.json();
+		// 	})
+		// 	.then((user) => this.setState({ user }));
 	}
 
 	render() {

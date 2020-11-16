@@ -11,6 +11,7 @@ class PositiveStatement extends Component {
 		content: "",
 		user_id: null,
 		touched: false,
+		error: null,
 	};
 
 	clearValues = () => {
@@ -18,12 +19,14 @@ class PositiveStatement extends Component {
 			content: "",
 			user_id: null,
 			touched: false,
+			error: null,
 		});
 	};
 
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const { content, user_id } = this.state;
+		this.setState({ error: null });
 		const newPositiveStatement = {
 			content,
 			user_id: Number(user_id),
@@ -94,7 +97,7 @@ class PositiveStatement extends Component {
 								</header>
 								<label htmlFor="positive-statement-form"></label>
 								<textarea
-									name="positive-statement-form"
+									className="positive-statement-form"
 									id="positive-statement-form"
 									value={this.state.content}
 									rows="15"
