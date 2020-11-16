@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LogoutButton from "../LogoutButton";
 import Context from "../../Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class HomePage extends Component {
 	static contextType = Context;
@@ -13,33 +14,51 @@ class HomePage extends Component {
 					<LogoutButton />
 					<h1>Gentle</h1>
 					<h3>Welcome to your homepage</h3>
-					<Link to={"/treasure"}>
-						<button className="hidden-treasure">
-							<span>Your Treasures</span>
-						</button>
-					</Link>
 				</header>
 				<section>
-					<h4>This Is Your Space</h4>
-					<p>
-						Remember, you are not your thoughts. You are not your emotions. You
-						are a being with a wonderful choice. That is, "How will I choose to
-						handle this?" and that is all we can control. Give yourself grace
-						and kindness as you move forward. Love yourself, even in your
-						failures because, that is where you will learn the most.
-					</p>
-				</section>
-				<section>
-					<Link to={"/vent"}>
-						<button>
-							<span>Vent</span>
-						</button>
-					</Link>
-					<Link to={"/notes"}>
-						<button>
-							<span>Note It</span>
-						</button>
-					</Link>
+					<div className="home-div">
+						<Link to={"/treasure"}>
+							<button className="hidden-treasure">
+								<span>Your Treasures</span>
+							</button>
+						</Link>
+						<h4>This Is Your Space</h4>
+						<p>
+							Here and now, you are free to be you. Give yourself grace and
+							kindness as you move forward. Allow yourself what you need.
+						</p>
+						<br />
+						<div className="vent-link-div">
+							<p>
+								Need a safe place to let it all out? Release your frustrations
+								in your{" "}
+								<em>
+									<strong>Vent</strong>
+								</em>{" "}
+								space <FontAwesomeIcon icon="angle-double-down" />
+							</p>
+
+							<Link to={"/vent"}>
+								<button>
+									<span>Vent</span>
+								</button>
+							</Link>
+						</div>
+						<div>
+							<p>
+								If your mind feels cluttered, store some of that clutter in your{" "}
+								<em>
+									<strong>Note It</strong>
+								</em>{" "}
+								space <FontAwesomeIcon icon="angle-double-down" />
+							</p>
+							<Link to={"/notes"}>
+								<button>
+									<span>Note It</span>
+								</button>
+							</Link>
+						</div>
+					</div>
 				</section>
 			</>
 		);

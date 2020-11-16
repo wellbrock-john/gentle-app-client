@@ -73,7 +73,10 @@ class App extends Component {
 				}
 				return res.json();
 			})
-			.then((positivestatements) => this.setState({ positivestatements }));
+			.then((positivestatements) => {
+				console.log(positivestatements);
+				this.setState({ positivestatements });
+			});
 	}
 
 	render() {
