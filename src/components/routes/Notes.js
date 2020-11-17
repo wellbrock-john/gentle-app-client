@@ -106,15 +106,12 @@ class Notes extends Component {
 	render() {
 		return (
 			<>
-				<header role="banner">
+				<header className="notes-header" role="banner">
 					<BackButton />
 					<LogoutButton />
-					<h1>Note It</h1>
-					<h3>
-						Allow yourself to feel free of cluttered thoughts. If something is
-						bothering you, you can note it here. Then, bring it up in your next
-						therapy session. Keep in mind that this is your space to note
-						anything you like.
+					<h1 className="pages-h1">Note It</h1>
+					<h3 className="notes-h3">
+						Allow yourself to feel free of cluttered thoughts.
 					</h3>
 				</header>
 				<section>
@@ -124,15 +121,12 @@ class Notes extends Component {
 						onSubmit={(e) => this.handleSubmit(e)}
 					>
 						<section className="form-section">
-							<header>
-								<h3>A Gentle Reminder</h3>
-							</header>
 							<label htmlFor="gentle-reminder"></label>
 							<fieldset className="subject-line" aria-label="subject-line">
 								<label htmlFor="subject">Subject</label>
 								<input
 									type="text"
-									placeholder="Ex: Seasonal Depression"
+									placeholder="Ex: A Gentle Reminder"
 									value={this.state.subject}
 									className="subject"
 									id="subject"
@@ -143,6 +137,7 @@ class Notes extends Component {
 							<textarea
 								className="gentle-reminder"
 								id="gentle-reminder"
+								placeholder="Remember to..."
 								value={this.state.content}
 								rows="15"
 								required

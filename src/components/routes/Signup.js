@@ -41,50 +41,61 @@ class SignUp extends Component {
 							{this.state.error && <p className="error">{this.state.error}</p>}
 							<fieldset aria-label="full_name">
 								<div>
-									<label htmlFor="full_name">Name</label>
 									<input
 										placeholder="First and Last Name"
 										type="text"
 										name="full_name"
 										id="full_name"
-									/>
-								</div>
-							</fieldset>
-							<fieldset aria-label="username">
-								<div>
-									<label htmlFor="username">Username</label>
-									<input
-										type="text"
-										placeholder="LightBringer85"
-										name="username"
-										id="username"
+										required
 									/>
 								</div>
 							</fieldset>
 							<fieldset aria-label="email">
 								<div>
-									<label htmlFor="email">Email</label>
 									<input
 										type="email"
-										placeholder="email"
+										placeholder="Email"
 										name="email"
 										id="email"
+										required
+									/>
+								</div>
+							</fieldset>
+							<fieldset aria-label="username">
+								<div>
+									<input
+										type="text"
+										placeholder="Username"
+										name="username"
+										id="username"
+										required
 									/>
 								</div>
 							</fieldset>
 							<fieldset aria-label="password">
 								<div>
-									<label htmlFor="password">Password</label>
-									<input type="password" name="password" id="password" />
+									<input
+										type="password"
+										name="password"
+										id="password"
+										placeholder="Password"
+										required
+									/>
 								</div>
 							</fieldset>
 							<fieldset aria-label="signup">
-								<button className="signup" type="submit" aria-label="signup">
+								<button
+									className="signup-btn"
+									type="submit"
+									aria-label="signup"
+								>
 									<span>Sign Up</span>
 								</button>
 							</fieldset>
 							<div>
-								<p>If you have an account already please login here:</p>
+								<p className="login-re-route">
+									If you have an account already please login here:
+								</p>
 								<Link to={"/login"}>
 									<button>
 										<span>Login</span>

@@ -22,11 +22,11 @@ class Vent extends Component {
 	render() {
 		return (
 			<>
-				<header role="banner">
+				<header className="pages-header" role="banner">
 					<BackButton />
 					<LogoutButton />
-					<h1>Vent it out.</h1>
-					<h3>Then, let it go.</h3>
+					<h1 className="pages-h1">Vent it out.</h1>
+					<h3 className="pages-h3">Then, let it go.</h3>
 				</header>
 				<section>
 					<form
@@ -36,10 +36,10 @@ class Vent extends Component {
 					>
 						<section className="form-section">
 							<header>
-								<h3>
+								<p>
 									Remind yourself that you are safe. Allow yourself to feel
 									freely.
-								</h3>
+								</p>
 							</header>
 							<label htmlFor="vent-it"></label>
 							<textarea
@@ -49,9 +49,11 @@ class Vent extends Component {
 								onChange={(e) => this.updateText(e.target.value)}
 							></textarea>
 						</section>
-						<button type="submit" aria-label="vent-button">
-							Release
-						</button>
+						<section>
+							<button type="submit" aria-label="vent-button">
+								Release
+							</button>
+						</section>
 					</form>
 				</section>
 			</>

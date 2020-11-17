@@ -28,11 +28,11 @@ class LoginPage extends Component {
 		return (
 			<>
 				<header role="banner">
-					<h1>Hello Friend,</h1>
+					<h1 className="login-greeting">Hello Friend,</h1>
 				</header>
 				<section>
 					<header>
-						<h3>Please Log In When You Are Ready</h3>
+						<h4>Let's Get You Into Your Space</h4>
 					</header>
 					<div className="login-div">
 						<form
@@ -45,7 +45,7 @@ class LoginPage extends Component {
 									<label htmlFor="username">Username</label>
 									<input
 										type="text"
-										placeholder="username"
+										placeholder="John Smith"
 										name="username"
 										id="username"
 										onChange={(e) => console.log(e)}
@@ -57,6 +57,7 @@ class LoginPage extends Component {
 									<label htmlFor="password">Password</label>
 									<input
 										type="password"
+										placeholder="P@ssword1234"
 										name="password"
 										id="password"
 										onChange={(e) => console.log(e)}

@@ -6,7 +6,7 @@ class LandingPage extends Component {
 		return (
 			<>
 				<header role="banner">
-					<h1>Gentle</h1>
+					<h1 className="landing-h1">Gentle</h1>
 					<h2>Feel safe. Be you.</h2>
 				</header>
 				<hr className="rounded" />

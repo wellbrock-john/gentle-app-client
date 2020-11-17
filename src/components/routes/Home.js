@@ -10,19 +10,17 @@ class HomePage extends Component {
 	render() {
 		return (
 			<>
-				<header role="banner">
+				<header className="pages-header" role="banner">
 					<LogoutButton />
-					<h1>Gentle</h1>
-					<h3>Welcome to your homepage</h3>
+					<h1 className="pages-h1">Gentle</h1>
+					<h5>Welcome to your homepage</h5>
 				</header>
+				<hr className="rounded" />
 				<section>
 					<div className="home-div">
-						<Link to={"/treasure"}>
-							<button className="hidden-treasure">
-								<span>Your Treasures</span>
-							</button>
-						</Link>
-						<h4>This Is Your Space</h4>
+						<hr className="rounded-home-top" />
+						<h5 className="your-space">This Is Your Space</h5>
+						<hr className="rounded" />
 						<p>
 							Here and now, you are free to be you. Give yourself grace and
 							kindness as you move forward. Allow yourself what you need.
@@ -58,6 +56,11 @@ class HomePage extends Component {
 								</button>
 							</Link>
 						</div>
+						<Link to={"/treasure"}>
+							<button className="hidden-treasure">
+								<span>Your Treasures</span>
+							</button>
+						</Link>
 					</div>
 				</section>
 			</>

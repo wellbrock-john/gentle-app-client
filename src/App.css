@@ -2,16 +2,55 @@
 	box-sizing: border-box;
 }
 
+/* ----- General ----- */
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 main {
 	justify-content: center;
 	align-items: center;
 	min-height: 100%;
 }
 
-.App {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+header {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	padding: 0 5px;
+	position: relative;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+.landing-h1 {
+	margin-bottom: 0;
+	font-size: 50px;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+h4 {
+	font-size: 19px;
+	margin-top: 15px;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	font-size: small;
+	font-style: italic;
+	letter-spacing: 0.5px;
 }
 
 .footer {
@@ -37,61 +76,15 @@ footer a:hover {
 	color: darkgreen;
 }
 
-header {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	padding: 0 5px;
-	position: relative;
-	margin-bottom: 0;
-}
-
-.rounded {
-	margin-top: 0;
-	border: 1px solid rgb(248, 248, 248);
-	border-radius: 10px;
-	width: 75%;
-}
-
-h1 {
-	margin-bottom: 0;
-	font-size: 50px;
-}
+/* ----- General Sections/Divs ----- */
 
 section {
 	min-height: 10rem;
 	padding: 0 15px;
 	text-align: center;
-	padding-bottom: 6rem;
 }
 
-.home-div {
-	color: white;
-	border: solid;
-	border-color: #d8f1fd;
-	border-radius: 1rem;
-	border-width: 0.4rem;
-	background-color: #36424e;
-	padding-bottom: 2rem;
-}
-
-p {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-}
-
-button {
-	margin-bottom: 50px;
-	height: 3rem;
-	width: 5.5rem;
-	border-radius: 7px;
-	border-top-color: rgb(203, 225, 231);
-	border-left-color: rgb(203, 225, 231);
-	border-bottom-color: rgb(148, 190, 230);
-	border-right-color: rgb(148, 190, 230);
-	background-color: #cebebe;
-}
+/* ----- Landing ----- */
 
 .landing-section {
 	display: flex;
@@ -105,8 +98,160 @@ button {
 	margin-top: 25px;
 }
 
+/* ----- Sign Up ----- */
+
+.signup-div {
+	text-align: center;
+}
+
+/* ----- Login ----- */
+
+.login-greeting {
+	font-size: 30px;
+}
+
+.login-div {
+	text-align: center;
+}
+
+.login-re-route {
+	font-size: small;
+	margin-bottom: 0;
+}
+
+/* ----- Pages ----- */
+
+.pages-div {
+	display: flex;
+	text-align: center;
+}
+
+.pages-header {
+	margin-top: 28px;
+}
+
+.pages-h1 {
+	font-size: 35px;
+	margin-top: 40px;
+}
+
+.pages-h3 {
+	font-size: large;
+}
+
+.pages-h5 {
+	font-size: 14px;
+	margin-bottom: 7px;
+	margin-top: 10px;
+}
+
+/* ----- Home ----- */
+
+.home-div {
+	color: white;
+	border: solid;
+	border-color: #d8f1fd;
+	border-radius: 1rem;
+	border-width: 0.4rem;
+	background-color: #36424e;
+	padding-bottom: 2rem;
+	margin-top: 25px;
+}
+
+.your-space {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* ----- Vent Page ----- */
+
+/* ----- Note It Page ----- */
+
+.notes-header {
+	margin: 0 5px 0 5px;
+}
+
+.notes-h3 {
+	font-size: smaller;
+	width: 95%;
+}
+
+/* ----- Forms ----- */
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 5px;
+	max-width: 650px;
+	border: none;
+}
+
+input {
+	border-top-color: cornsilk;
+	border-left-color: cornsilk;
+	border-radius: 5px;
+	line-height: 20px;
+}
+
+label {
+	font-size: medium;
+}
+
+.form-section textarea {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 15px;
+}
+
+.positive-statement-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* ----- Links ----- */
+
 .vent-link-div {
 	padding-bottom: 4rem;
+}
+
+/* ----- Buttons ----- */
+
+button {
+	margin-top: 10px;
+	height: 3rem;
+	width: 5.5rem;
+	border-radius: 7px;
+	border-top-color: rgb(212, 208, 190);
+	border-left-color: rgb(212, 208, 190);
+	border-bottom-color: rgb(148, 190, 230);
+	border-right-color: rgb(148, 190, 230);
+	background-color: #cebebe;
+}
+
+.signup-btn {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.hidden-treasure {
+	margin-top: 40px;
 }
 
 .back-button {
@@ -115,16 +260,16 @@ button {
 	border: 0;
 	color: black;
 	display: block;
-	font-size: 12px;
+	padding: 0;
+	font-size: 8px;
 	font-weight: bold;
-	height: 60px;
-	padding: 8px 8px 8px;
+	height: 30px;
 	text-align: center;
 	text-decoration: none;
-	width: 60px;
+	width: 30px;
 	cursor: pointer;
 	position: absolute;
-	top: 10px;
+	top: -47px;
 	left: 3px;
 }
 
@@ -134,74 +279,76 @@ button {
 	border: 0;
 	color: black;
 	display: block;
-	font-size: 12px;
+	font-size: 8px;
 	font-weight: bold;
-	height: 60px;
-	padding: 8px 8px 8px;
+	height: 30px;
 	text-align: center;
 	text-decoration: none;
-	width: 60px;
+	width: 30px;
 	cursor: pointer;
 	position: absolute;
-	top: 10px;
+	top: -47px;
 	right: 3px;
-}
-
-h2 {
-	font-weight: 700;
-	font-size: 20px;
-	margin-bottom: 20px;
-}
-
-form {
-	margin: 0 auto;
-	padding: 0 0 40px;
-	max-width: 650px;
-	text-align: left;
-}
-
-label p {
-	margin: 6px 0 23px;
-}
-
-.form-section {
-	margin-bottom: 30px;
 }
 
 .button-section {
 	padding: 0 0 0 15px;
 }
 
-.form-section input,
-.form-section textarea {
-	width: 100%;
+/* ----- Misc ----- */
+
+.rounded {
+	margin-top: 0;
+	border: 1px solid rgb(248, 248, 248);
+	border-radius: 10px;
+	width: 85%;
 }
 
-.login-div {
-	text-align: center;
+.rounded-home-top {
+	margin-top: 15px;
+	border: 1px solid rgb(248, 248, 248);
+	border-radius: 10px;
+	width: 85%;
 }
 
-.login-form {
-}
+/* ----- Desktop Styling ----- */
 
-.signup-div {
-	text-align: center;
-}
+@media all and (min-width: 500px) {
+	.back-button {
+		background-color: #cacaca;
+		border-radius: 30px;
+		border: 0;
+		color: black;
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		height: 60px;
+		padding: 8px 8px 8px;
+		text-align: center;
+		text-decoration: none;
+		width: 60px;
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		left: 3px;
+	}
 
-.signup-form {
+	.logout-button {
+		background-color: #cacaca;
+		border-radius: 30px;
+		border: 0;
+		color: black;
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		height: 60px;
+		padding: 8px 8px 8px;
+		text-align: center;
+		text-decoration: none;
+		width: 60px;
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 3px;
+	}
 }
-
-.positive-statement-div {
-	display: flex;
-	text-align: center;
-}
-
-.positive-statement-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-/* #treasures-element {
-	display: none;
-} */

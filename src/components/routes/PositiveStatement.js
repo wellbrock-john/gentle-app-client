@@ -79,13 +79,16 @@ class PositiveStatement extends Component {
 	render() {
 		return (
 			<>
-				<header role="banner">
+				<header className="pages-header" role="banner">
 					<LogoutButton />
-					<h1>Welcome</h1>
-					<h3>Let's begin with a gentle, positive step forward.</h3>
+					<h1 className="pages-h1">Welcome</h1>
+					<h3 className="pages-h3">
+						Let's begin with a gentle, positive step forward.
+					</h3>
 				</header>
+				<hr className="rounded" />
 				<section>
-					<div className="positive-statement-div">
+					<div className="pages-div">
 						<form
 							className="positive-statement-form"
 							aria-label="positive-statement-form"
@@ -93,7 +96,9 @@ class PositiveStatement extends Component {
 						>
 							<div className="form-section">
 								<header>
-									<h3>Write something positive about you.</h3>
+									<h5 className="ps-h5">
+										Write something filled with love, to yourself.
+									</h5>
 								</header>
 								<label htmlFor="positive-statement-form"></label>
 								<textarea
