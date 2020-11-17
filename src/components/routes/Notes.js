@@ -29,6 +29,7 @@ class Notes extends Component {
 			subject,
 			content,
 		};
+
 		const postOptions = {
 			method: "POST",
 			headers: {
@@ -48,6 +49,7 @@ class Notes extends Component {
 			})
 			.then((newNote) => {
 				this.context.addNote(newNote);
+				this.clearValues();
 				this.props.history.push(`/notes`);
 			})
 			.catch((err) => {
@@ -84,27 +86,22 @@ class Notes extends Component {
 		}
 	}
 
-	// deleteNoteRequest(e) {
-	// 	e.preventDefault();
-	// 	const deleteOptions = {
-	// 		method: "DELETE",
-	// 		headers: {
-	// 			Authorization: `Bearer ${TokenService.getAuthToken()}`,
-	// 			Accept: "application/json",
-	// 			"Content-Type": "application/json",
-	// 		},
-	// 	};
-	// 	fetch(`${API_ENDPOINT}/api/notes/${note_id}`, deleteOptions)
-	// 		.then((res) => {
-	// 			if (!res.ok) return res.json().then((error) => Promise.reject(error));
-	// 		})
-	// 		.then((noContent) => {
-	// 			callback(note_id);
-	// 		})
-	// 		.catch((error) => {
-	// 			console.error(error);
-	// 		});
-	// }
+	deleteNoteRequest(note_id) {
+		const deleteOptions = {
+			method: "DELETE",
+			headers: {
+				Authorization: `Bearer ${TokenService.getAuthToken()}`,
+			},
+		};
+		fetch(`${API_ENDPOINT}/api/notes/${note_id}`, deleteOptions)
+			.then((res) => {
+				if (!res.ok) return res.json().then((error) => Promise.reject(error));
+				this.context.deleteNote(note_id);
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	}
 
 	render() {
 		return (
@@ -140,6 +137,7 @@ class Notes extends Component {
 									className="subject"
 									id="subject"
 									onChange={(e) => this.updateNoteSubject(e.target.value)}
+									required
 								/>
 							</fieldset>
 							<textarea
@@ -165,18 +163,13 @@ class Notes extends Component {
 											{":"}
 											{"  "}
 											{note.content}
-											{/* {"          "}
+
 											<button
 												className="delete-btn"
-												onClick={(e) =>
-													this.deleteNoteRequest(
-														note.note_id,
-														this.context.deleteNote()
-													)
-												}
+												onClick={(e) => this.deleteNoteRequest(note.note_id)}
 											>
 												Delete
-											</button> */}
+											</button>
 										</li>
 									);
 								})}

@@ -47,6 +47,13 @@ class App extends Component {
 				positivestatements: [],
 			});
 		},
+		logout: () => {
+			this.setState({
+				positivestatements: [],
+				notes: [],
+				showPositiveStatements: false,
+			});
+		},
 	};
 
 	componentDidMount() {

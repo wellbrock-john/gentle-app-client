@@ -3,45 +3,63 @@
 }
 
 main {
-	background-color: #aee4fa;
-}
-
-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	font-size: 20px;
-	background-color: #aee4fa;
-	color: #444;
-	text-align: center;
-	line-height: 1.5;
-	min-width: 320px;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
 }
 
 .App {
-	background-color: #aee4fa;
-	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
 	width: 100%;
-	background-color: #aee4fa;
+}
+
+footer a {
+	font-size: 85%;
+}
+
+footer a:visited {
+	color: gray;
+}
+
+footer a:link {
+	color: rgb(22, 22, 22);
+}
+
+footer a:hover {
+	color: darkgreen;
 }
 
 header {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
-	padding: 25px 5px;
+	padding: 0 5px;
 	position: relative;
+	margin-bottom: 0;
+}
+
+.rounded {
+	margin-top: 0;
+	border: 1px solid rgb(248, 248, 248);
+	border-radius: 10px;
+	width: 75%;
 }
 
 h1 {
-	padding-top: 1rem;
+	margin-bottom: 0;
+	font-size: 50px;
 }
 
 section {
 	min-height: 10rem;
-	padding: 30px 15px;
-	background-color: #aee4fa;
+	padding: 0 15px;
 	text-align: center;
 	padding-bottom: 6rem;
 }
@@ -63,16 +81,28 @@ p {
 	margin-right: 0.5rem;
 }
 
-.landing-section {
-	margin-bottom: 250px;
+button {
+	margin-bottom: 50px;
+	height: 3rem;
+	width: 5.5rem;
+	border-radius: 7px;
+	border-top-color: rgb(203, 225, 231);
+	border-left-color: rgb(203, 225, 231);
+	border-bottom-color: rgb(148, 190, 230);
+	border-right-color: rgb(148, 190, 230);
+	background-color: #cebebe;
 }
 
-button {
-	display: inline-block;
-	margin-bottom: 50px;
-	height: 3.5rem;
-	width: 7.5rem;
-	margin: 1rem 1rem 0 1rem;
+.landing-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.landing-btn-div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 25px;
 }
 
 .vent-link-div {
@@ -120,6 +150,7 @@ button {
 h2 {
 	font-weight: 700;
 	font-size: 20px;
+	margin-bottom: 20px;
 }
 
 form {
@@ -131,10 +162,6 @@ form {
 
 label p {
 	margin: 6px 0 23px;
-}
-
-label {
-	display: block;
 }
 
 .form-section {
@@ -151,21 +178,17 @@ label {
 }
 
 .login-div {
-	display: block;
 	text-align: center;
 }
 
 .login-form {
-	display: inline-block;
 }
 
 .signup-div {
-	display: block;
 	text-align: center;
 }
 
 .signup-form {
-	display: inline-block;
 }
 
 .positive-statement-div {

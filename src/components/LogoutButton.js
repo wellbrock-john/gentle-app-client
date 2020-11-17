@@ -8,6 +8,7 @@ class LogoutButton extends Component {
 
 	logout = () => {
 		TokenService.clearAuthToken();
+		this.context.logout();
 		this.props.history.push("/");
 	};
 	render() {
