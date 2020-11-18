@@ -65,9 +65,6 @@ ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 35px 0 0 0;
-	border: 1px solid;
-	border-color: rgb(212, 208, 190);
-	border-radius: 3px;
 }
 
 li {
@@ -88,6 +85,16 @@ li {
 	position: relative;
 }
 
+.fa-hand-holding-heart {
+	font-size: 40px;
+	color: darkgreen;
+}
+
+.heart-btn {
+	background-color: transparent;
+	border: transparent;
+}
+
 .footer {
 	margin-top: 40px;
 	left: 0;
@@ -100,7 +107,7 @@ footer a {
 }
 
 footer a:visited {
-	color: gray;
+	color: white;
 }
 
 footer a:link {
@@ -114,7 +121,7 @@ footer a:hover {
 /* ----- General Sections/Divs ----- */
 
 section {
-	min-height: 100%;
+	height: inherit;
 	padding: 0 15px;
 	text-align: center;
 }
@@ -367,41 +374,244 @@ button {
 /* ----- Desktop Styling ----- */
 
 @media all and (min-width: 500px) {
+	html {
+		position: relative;
+		min-height: 110%;
+	}
+
+	body {
+		min-height: 110%;
+	}
+	#root {
+		width: 100%;
+		min-height: 110%;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: unset;
+		width: 50%;
+		min-height: 110%;
+	}
+
+	h3 {
+		font-size: 30px;
+		margin-top: 65px;
+	}
+
+	.signup-btn {
+		margin-bottom: 50%;
+	}
+
+	input {
+		height: 40px;
+		width: 150%;
+		margin-bottom: 5%;
+	}
+
+	.App {
+		min-height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: initial;
+		align-items: center;
+	}
+
+	.App-main {
+		height: 85%;
+	}
+
+	header {
+		position: unset;
+	}
+
+	.notes-header {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer {
+		margin-top: 40px;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		position: absolute;
+	}
+
+	footer a {
+		font-size: 85%;
+	}
+
+	button {
+		margin-top: 10px;
+		height: 3.5rem;
+		width: 7rem;
+	}
+
+	textarea {
+		min-width: 400px;
+	}
+
+	.subject {
+		width: 400px;
+	}
+
+	.landing-btn-div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin-top: 7%;
+		width: 45%;
+	}
+	.landing-section {
+		display: flex;
+		align-items: center;
+		height: auto;
+	}
+
+	.notes-section {
+		margin-top: 0;
+	}
+
 	.back-button {
-		background-color: #cacaca;
-		border-radius: 30px;
+		background-color: #defcd9;
+		border-radius: 5px;
 		border: 0;
 		color: black;
 		display: block;
 		font-size: 12px;
 		font-weight: bold;
-		height: 60px;
+		height: 50px;
 		padding: 8px 8px 8px;
 		text-align: center;
 		text-decoration: none;
-		width: 60px;
+		width: 50px;
 		cursor: pointer;
 		position: absolute;
-		top: 10px;
-		left: 3px;
+		top: 0px;
+		left: 92%;
 	}
 
 	.logout-button {
-		background-color: #cacaca;
-		border-radius: 30px;
+		background-color: #defcd9;
+		border-radius: 5px;
 		border: 0;
 		color: black;
 		display: block;
 		font-size: 12px;
 		font-weight: bold;
-		height: 60px;
+		height: 50px;
 		padding: 8px 8px 8px;
 		text-align: center;
 		text-decoration: none;
-		width: 60px;
+		width: 50px;
 		cursor: pointer;
 		position: absolute;
-		top: 10px;
-		right: 3px;
+		top: 0px;
+		right: 2%;
+	}
+
+	.rounded {
+		width: 60%;
+		margin-top: 40px;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 13%;
+	}
+
+	.form-section {
+		margin-top: 10%;
+	}
+
+	.login-greeting {
+		font-size: 35px;
+		margin-bottom: 1%;
+	}
+
+	.pages-div {
+		display: flex;
+		text-align: center;
+	}
+
+	.pages-header {
+		margin-top: 28px;
+	}
+
+	.pages-h1 {
+		font-size: 45px;
+		margin-top: 40px;
+	}
+
+	.pages-h3 {
+		font-size: x-large;
+	}
+
+	.pages-h5 {
+		font-size: 20px;
+		margin-bottom: 7px;
+		margin-top: 10px;
+	}
+
+	.ps-h5 {
+		font-size: 20px;
+	}
+
+	p {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		font-size: small;
+		font-style: italic;
+		letter-spacing: 0.5px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding: 0;
+		margin: 0 0 50px 0;
+	}
+
+	li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-size: medium;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style: italic;
+		border: solid;
+		border-radius: 3px;
+		border-width: 2px;
+		border-top-color: rgb(212, 208, 190);
+		border-left-color: rgb(212, 208, 190);
+		border-bottom-color: rgb(212, 208, 190);
+		border-right-color: rgb(212, 208, 190);
+		background-color: #defcd9;
+		padding: 5px 25px 10px 10px;
+		margin-bottom: 10px;
+		position: relative;
+	}
+
+	.fa-hand-holding-heart {
+		font-size: 50px;
+		color: darkgreen;
+	}
+
+	.heart-btn {
+		background-color: transparent;
+		border: transparent;
 	}
 }

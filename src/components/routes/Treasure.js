@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BackButton from "../BackButton";
 import LogoutButton from "../LogoutButton";
 import Context from "../../Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Treasure extends Component {
 	static contextType = Context;
@@ -23,8 +24,11 @@ class Treasure extends Component {
 						</h3>
 						<h5>Click the icon below</h5>
 					</header>
-					<button onClick={(e) => this.context.handleToggleClick(e)}>
-						This will be a treasure icon
+					<button
+						className="heart-btn"
+						onClick={(e) => this.context.handleToggleClick(e)}
+					>
+						<FontAwesomeIcon icon="hand-holding-heart" />
 					</button>
 				</section>
 				<section>

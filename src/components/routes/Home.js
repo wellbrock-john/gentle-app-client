@@ -56,9 +56,15 @@ class HomePage extends Component {
 								</button>
 							</Link>
 						</div>
+						<br />
+						<br />
+						<p>
+							Come see the wonderful words you have gifted yourself{" "}
+							<FontAwesomeIcon icon="angle-double-down" />
+						</p>
 						<Link to={"/treasure"}>
-							<button className="hidden-treasure">
-								<span>Your Treasures</span>
+							<button className="heart-btn">
+								<FontAwesomeIcon icon="hand-holding-heart" />
 							</button>
 						</Link>
 					</div>

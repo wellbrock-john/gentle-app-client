@@ -100,6 +100,8 @@ class App extends Component {
 						<Route path="/positivestatements" component={PositiveStatement} />
 						<Route path="/vent" component={Vent} />
 					</main>
+					<br />
+					<br />
 					<footer role="contentinfo" className="footer">
 						<a className="footer-link" href="mailto:wellbrock23john@gmail.com">
 							Email

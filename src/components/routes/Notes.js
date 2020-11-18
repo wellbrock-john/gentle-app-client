@@ -114,7 +114,7 @@ class Notes extends Component {
 						Allow yourself to feel free of cluttered thoughts.
 					</h3>
 				</header>
-				<section>
+				<section className="notes-section">
 					<form
 						className="note-form"
 						aria-label="note-form"
