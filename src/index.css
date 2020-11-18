@@ -11,14 +11,13 @@ body {
 	text-align: center;
 	font-size: 20px;
 	min-width: 200px;
+	background-image: linear-gradient(to bottom right, #aee4fa, #096f97);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
 	color: rgb(49, 49, 49);
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
-}
-html {
-	background-image: linear-gradient(to bottom right, #aee4fa, #096f97);
-	background-attachment: scroll;
 }

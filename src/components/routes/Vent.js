@@ -25,7 +25,7 @@ class Vent extends Component {
 				<header className="pages-header" role="banner">
 					<BackButton />
 					<LogoutButton />
-					<h1 className="pages-h1">Vent it out.</h1>
+					<h1 className="pages-h1">Vent It</h1>
 					<h3 className="pages-h3">Then, let it go.</h3>
 				</header>
 				<section>

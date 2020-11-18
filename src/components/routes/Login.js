@@ -27,50 +27,52 @@ class LoginPage extends Component {
 	render() {
 		return (
 			<>
-				<header role="banner">
-					<h1 className="login-greeting">Hello Friend,</h1>
-				</header>
 				<section>
-					<header>
-						<h4>Let's Get You Into Your Space</h4>
+					<header role="banner">
+						<h1 className="login-greeting">Hello Friend,</h1>
 					</header>
-					<div className="login-div">
-						<form
-							className="login-form"
-							aria-label="login-form"
-							onSubmit={this.handleLogin}
-						>
-							<fieldset aria-label="username">
-								<div>
-									<label htmlFor="username">Username</label>
-									<input
-										type="text"
-										placeholder="John Smith"
-										name="username"
-										id="username"
-										onChange={(e) => console.log(e)}
-									/>
-								</div>
-							</fieldset>
-							<fieldset aria-label="password">
-								<div>
-									<label htmlFor="password">Password</label>
-									<input
-										type="password"
-										placeholder="P@ssword1234"
-										name="password"
-										id="password"
-										onChange={(e) => console.log(e)}
-									/>
-								</div>
-							</fieldset>
-							<fieldset aria-label="login">
-								<button className="login" type="submit" aria-label="login">
-									<span>Login</span>
-								</button>
-							</fieldset>
-						</form>
-					</div>
+					<section>
+						<header>
+							<h4>Let's Get You Into Your Space</h4>
+						</header>
+						<div className="login-div">
+							<form
+								className="login-form"
+								aria-label="login-form"
+								onSubmit={this.handleLogin}
+							>
+								<fieldset aria-label="username">
+									<div>
+										<label htmlFor="username">Username</label>
+										<input
+											type="text"
+											placeholder="John Smith"
+											name="username"
+											id="username"
+											onChange={(e) => console.log(e)}
+										/>
+									</div>
+								</fieldset>
+								<fieldset aria-label="password">
+									<div>
+										<label htmlFor="password">Password</label>
+										<input
+											type="password"
+											placeholder="P@ssword1234"
+											name="password"
+											id="password"
+											onChange={(e) => console.log(e)}
+										/>
+									</div>
+								</fieldset>
+								<fieldset aria-label="login">
+									<button className="login" type="submit" aria-label="login">
+										<span>Login</span>
+									</button>
+								</fieldset>
+							</form>
+						</div>
+					</section>
 				</section>
 			</>
 		);

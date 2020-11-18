@@ -9,19 +9,18 @@ class Treasure extends Component {
 	render() {
 		return (
 			<>
-				<header role="banner">
+				<header className="pages-header" role="banner">
 					<BackButton />
 					<LogoutButton />
-					<h1>Gentle</h1>
+					<h1 className="pages-h1">Gentle</h1>
 					<h2>Feel safe. Be you.</h2>
 				</header>
+				<hr className="rounded" />
 				<section>
 					<header>
-						<h3>
-							The love we give ourselves, amplifies the love we can give to
-							others.
+						<h3 className="pages-h3">
+							The love you have for yourself wants to be seen!
 						</h3>
-						<h4>The love you have for yourself wants to be seen!</h4>
 						<h5>Click the icon below</h5>
 					</header>
 					<button onClick={(e) => this.context.handleToggleClick(e)}>

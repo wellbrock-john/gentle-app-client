@@ -154,8 +154,11 @@ class Notes extends Component {
 								{this.context.notes.map((note) => {
 									return (
 										<li key={`note-${note.note_id}`}>
-											{note.subject}
-											{":"}
+											<strong>
+												{note.subject}
+												{":"}
+											</strong>
+
 											{"  "}
 											{note.content}
 
@@ -163,7 +166,7 @@ class Notes extends Component {
 												className="delete-btn"
 												onClick={(e) => this.deleteNoteRequest(note.note_id)}
 											>
-												Delete
+												X
 											</button>
 										</li>
 									);
