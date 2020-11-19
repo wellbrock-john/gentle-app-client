@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BackButton from "../BackButton";
 import LogoutButton from "../LogoutButton";
+import { CSSTransition } from "react-transition-group";
 
 class Vent extends Component {
 	state = {
