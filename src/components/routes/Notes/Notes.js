@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { API_ENDPOINT } from "../../config";
-import Context from "../../Context";
-import TokenService from "../../services/token-service";
-import BackButton from "../BackButton";
-import LogoutButton from "../LogoutButton";
+import { API_ENDPOINT } from "../../../config";
+import Context from "../../../Context";
+import TokenService from "../../../services/token-service";
+import BackButton from "../../BackButton";
+import LogoutButton from "../../LogoutButton";
 
 class Notes extends Component {
 	static contextType = Context;

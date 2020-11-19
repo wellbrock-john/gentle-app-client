@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AuthAPIService from "../../services/auth-api-service";
+import AuthAPIService from "../../../services/auth-api-service";
 
 class SignUp extends Component {
 	state = {

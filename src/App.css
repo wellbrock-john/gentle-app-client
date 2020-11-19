@@ -500,7 +500,7 @@ button {
 		cursor: pointer;
 		position: absolute;
 		top: 0px;
-		left: 40rem;
+		left: 0.5rem;
 	}
 
 	.logout-button {

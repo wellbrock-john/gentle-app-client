@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import BackButton from "../BackButton";
-import LogoutButton from "../LogoutButton";
+import BackButton from "../../BackButton";
+import LogoutButton from "../../LogoutButton";
 
 class Vent extends Component {
 	state = {
