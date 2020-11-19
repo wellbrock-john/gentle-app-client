@@ -373,7 +373,7 @@ button {
 
 /* ----- Desktop Styling ----- */
 
-@media all and (min-width: 300px) {
+@media all and (min-width: 450px) {
 	html {
 		position: relative;
 		min-height: 110%;
