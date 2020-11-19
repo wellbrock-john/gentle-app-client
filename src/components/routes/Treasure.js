@@ -1,8 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
+import Context from "../../Context";
 import BackButton from "../BackButton";
 import LogoutButton from "../LogoutButton";
-import Context from "../../Context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Treasure extends Component {
 	static contextType = Context;

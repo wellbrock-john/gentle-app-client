@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import AuthAPIService from "../../services/auth-api-service";
 import { Link } from "react-router-dom";
+import AuthAPIService from "../../services/auth-api-service";
 
 class SignUp extends Component {
 	state = {
@@ -17,7 +17,7 @@ class SignUp extends Component {
 			email: email.value,
 			password: password.value,
 		})
-			.then((user) => {
+			.then(() => {
 				this.props.history.push("/login");
 			})
 			.catch((res) => {

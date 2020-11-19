@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import BackButton from "../BackButton";
-import LogoutButton from "../LogoutButton";
+import { API_ENDPOINT } from "../../config";
 import Context from "../../Context";
 import TokenService from "../../services/token-service";
-import { API_ENDPOINT } from "../../config";
+import BackButton from "../BackButton";
+import LogoutButton from "../LogoutButton";
 
 class Notes extends Component {
 	static contextType = Context;
@@ -164,7 +164,7 @@ class Notes extends Component {
 
 											<button
 												className="delete-btn"
-												onClick={(e) => this.deleteNoteRequest(note.note_id)}
+												onClick={() => this.deleteNoteRequest(note.note_id)}
 											>
 												X
 											</button>

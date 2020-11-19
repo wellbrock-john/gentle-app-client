@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import Context from "./Context";
-
+import TokenService from "../src/services/token-service";
 import "./App.css";
 import HomePage from "./components/routes/Home";
 import LandingPage from "./components/routes/Landing";
 import LoginPage from "./components/routes/Login";
-import SignUp from "./components/routes/Signup";
-import Treasure from "./components/routes/Treasure";
 import Notes from "./components/routes/Notes";
 import PositiveStatement from "./components/routes/PositiveStatement";
+import SignUp from "./components/routes/Signup";
+import Treasure from "./components/routes/Treasure";
 import Vent from "./components/routes/Vent";
-import TokenService from "../src/services/token-service";
+import Context from "./Context";
 
 const { API_ENDPOINT } = require("./config");
 
@@ -31,7 +30,7 @@ class App extends Component {
 				],
 			});
 		},
-		handleToggleClick: (e) => {
+		handleToggleClick: () => {
 			this.setState({
 				showPositiveStatements: !this.state.showPositiveStatements,
 			});
@@ -41,7 +40,7 @@ class App extends Component {
 				notes: this.state.notes.filter((note) => note.note_id !== noteId),
 			});
 		},
-		deletePositiveStatements: (positivestatements) => {
+		deletePositiveStatements: () => {
 			return this.setState({
 				positivestatements: [],
 			});

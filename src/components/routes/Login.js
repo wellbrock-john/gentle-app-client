@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import TokenService from "../../services/token-service";
-import AuthAPIService from "../../services/auth-api-service";
 import Context from "../../Context";
+import AuthAPIService from "../../services/auth-api-service";
+import TokenService from "../../services/token-service";
 
 class LoginPage extends Component {
 	static contextType = Context;

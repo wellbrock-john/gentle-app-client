@@ -1,8 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LogoutButton from "../LogoutButton";
 import Context from "../../Context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import LogoutButton from "../LogoutButton";
 
 class HomePage extends Component {
 	static contextType = Context;

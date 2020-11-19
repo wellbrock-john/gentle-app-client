@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import TokenService from "../services/token-service";
 import { withRouter } from "react-router-dom";
 import Context from "../Context";
+import TokenService from "../services/token-service";
 
 class LogoutButton extends Component {
 	static contextType = Context;
