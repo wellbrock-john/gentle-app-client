@@ -35,7 +35,6 @@ class App extends Component {
 			this.setState({
 				showPositiveStatements: !this.state.showPositiveStatements,
 			});
-			console.log(this.state);
 		},
 		deleteNote: (noteId) => {
 			return this.setState({
@@ -81,7 +80,6 @@ class App extends Component {
 				return res.json();
 			})
 			.then((positivestatements) => {
-				console.log(positivestatements);
 				this.setState({ positivestatements });
 			});
 	}
