@@ -9,8 +9,13 @@ class SignUp extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		const { full_name, username, email, password } = e.target;
+		const { full_name, username, email, password, confirmPassword } = e.target;
 		this.setState({ error: null });
+		if (password.value !== confirmPassword.value) {
+			return this.setState({
+				error: "Whoops, those passwords do not match. Please try again.",
+			});
+		}
 		AuthAPIService.postUser({
 			full_name: full_name.value,
 			username: username.value,
@@ -79,6 +84,20 @@ class SignUp extends Component {
 										name="password"
 										id="password"
 										placeholder="Password"
+										required
+									/>
+								</div>
+							</fieldset>
+							<fieldset
+								htmlFor="confirm-password"
+								aria-label="confirm-password"
+							>
+								<div>
+									<input
+										type="password"
+										name="confirmPassword"
+										id="confirm-password"
+										placeholder="Confirm Password"
 										required
 									/>
 								</div>
