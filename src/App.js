@@ -119,6 +119,11 @@ class App extends Component {
 						>
 							LinkedIn
 						</a>
+						<div>
+							<small>
+								Copyright &copy; 2020 John Wellbrock. All Rights Reserved
+							</small>
+						</div>
 					</footer>
 				</div>
 			</Context.Provider>

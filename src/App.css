@@ -411,6 +411,10 @@ button {
 		margin-top: 65px;
 	}
 
+	small {
+		font-size: x-small;
+	}
+
 	.signup-btn {
 		margin-bottom: 50%;
 	}
