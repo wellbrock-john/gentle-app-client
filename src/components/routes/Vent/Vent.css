@@ -7,12 +7,22 @@
 	font-weight: bold;
 	font-style: italic;
 	font-size: x-large;
-	color: rgb(24, 112, 32);
+	color: rgb(165, 47, 0);
+	animation: text 7s;
 	text-align: center;
-	transition: opacity 5s ease-in-out;
-	-webkit-transition: opacity 5s ease-in-out;
-	-moz-transition: opacity 5s ease-in-out;
-	-ms-transition: opacity 5s ease-in-out;
-	-o-transition: opacity 5s ease-in-out;
+	transition: opacity 7s ease-in-out;
+	-webkit-transition: opacity 7s ease-in-out;
+	-moz-transition: opacity 7s ease-in-out;
+	-ms-transition: opacity 7s ease-in-out;
+	-o-transition: opacity 7s ease-in-out;
 	opacity: 1;
+}
+
+@keyframes text {
+	from {
+		color: rgb(194, 27, 27);
+	}
+	to {
+		color: rgb(69, 117, 93);
+	}
 }
