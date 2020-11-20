@@ -2,15 +2,34 @@ import React, { Component } from "react";
 import BackButton from "../../BackButton";
 import LogoutButton from "../../LogoutButton";
 
+import "./Vent.css";
+
 class Vent extends Component {
 	state = {
 		text: "",
+		show: false,
+		class: "",
 	};
 
-	handleReset = () => {
-		this.setState({
-			text: "",
-		});
+	handleReset = (e) => {
+		e.preventDefault();
+		this.setState(
+			{
+				show: true,
+			},
+			() => {
+				setTimeout(() => {
+					this.setState({ class: "hide-opacity" });
+				}, 100);
+				setTimeout(() => {
+					this.setState({
+						show: false,
+						text: "",
+						class: "",
+					});
+				}, 5000);
+			}
+		);
 	};
 
 	updateText = (inputText) => {
@@ -42,12 +61,19 @@ class Vent extends Component {
 								</p>
 							</header>
 							<label htmlFor="vent-it"></label>
-							<textarea
-								name="vent-it"
-								rows="15"
-								required
-								onChange={(e) => this.updateText(e.target.value)}
-							></textarea>
+							{this.state.show ? (
+								<h2 className={`vent-text ${this.state.class}`}>
+									{this.state.text}
+								</h2>
+							) : (
+								<textarea
+									name="vent-it"
+									rows="15"
+									required
+									onChange={(e) => this.updateText(e.target.value)}
+									value={this.state.text}
+								></textarea>
+							)}
 						</section>
 						<section>
 							<button type="submit" aria-label="vent-button">

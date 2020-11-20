@@ -41,6 +41,9 @@ class LoginPage extends Component {
 								aria-label="login-form"
 								onSubmit={this.handleLogin}
 							>
+								{this.state.error && (
+									<p className="error">{this.state.error}</p>
+								)}
 								<fieldset aria-label="username">
 									<div>
 										<label htmlFor="username">Username</label>
@@ -49,7 +52,7 @@ class LoginPage extends Component {
 											placeholder="John Smith"
 											name="username"
 											id="username"
-											onChange={(e) => console.log(e)}
+											required
 										/>
 									</div>
 								</fieldset>
@@ -61,7 +64,7 @@ class LoginPage extends Component {
 											placeholder="P@ssword1234"
 											name="password"
 											id="password"
-											onChange={(e) => console.log(e)}
+											required
 										/>
 									</div>
 								</fieldset>

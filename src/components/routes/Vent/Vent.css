@@ -1,0 +1,17 @@
+.vent-text.hide-opacity {
+	opacity: 0;
+}
+
+.vent-text {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size: x-large;
+	text-align: center;
+	transition: opacity 5s ease-in-out;
+	-webkit-transition: opacity 5s ease-in-out;
+	-moz-transition: opacity 5s ease-in-out;
+	-ms-transition: opacity 5s ease-in-out;
+	-o-transition: opacity 5s ease-in-out;
+	opacity: 1;
+}

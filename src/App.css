@@ -376,6 +376,10 @@ button {
 	width: 85%;
 }
 
+.error {
+	color: red;
+}
+
 /* ----- Desktop Styling ----- */
 
 @media all and (min-width: 450px) {
