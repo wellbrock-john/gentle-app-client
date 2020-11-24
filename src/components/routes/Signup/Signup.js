@@ -88,6 +88,7 @@ class SignUp extends Component {
 									/>
 								</div>
 							</fieldset>
+
 							<fieldset
 								htmlFor="confirm-password"
 								aria-label="confirm-password"
@@ -102,6 +103,11 @@ class SignUp extends Component {
 									/>
 								</div>
 							</fieldset>
+							<p className="pw-reqs">
+								Password must be at least 8 characters long and contain at least
+								one uppercase letter, one lower case letter, one special
+								character and one number.
+							</p>
 							<fieldset aria-label="signup">
 								<button
 									className="signup-btn"

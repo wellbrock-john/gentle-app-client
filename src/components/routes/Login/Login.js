@@ -28,10 +28,11 @@ class LoginPage extends Component {
 	render() {
 		return (
 			<>
+				<header role="banner">
+					<h1 className="landing-h1">Gentle</h1>
+					<h2>Feel safe. Be you.</h2>
+				</header>
 				<section className="login-section">
-					<header role="banner">
-						<h1 className="login-greeting">Hello Friend,</h1>
-					</header>
 					<section className="login-section">
 						<header>
 							<h4>Let's Get You Into Your Space</h4>

@@ -13,9 +13,11 @@ class HomePage extends Component {
 				<header className="pages-header" role="banner">
 					<LogoutButton />
 					<h1 className="pages-h1">Gentle</h1>
-					<h5>Welcome to your homepage</h5>
+					<h2>Feel safe. Be you.</h2>
 				</header>
+
 				<hr className="rounded" />
+				<h3 className="pages-h3">Welcome to your homepage</h3>
 				<section className="home-section">
 					<div className="home-div">
 						<hr className="rounded-home-top" />

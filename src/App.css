@@ -578,7 +578,7 @@ button {
 	}
 
 	.login-section {
-		margin-top: 3.5em;
+		margin-top: 1em;
 	}
 
 	.login-greeting {
@@ -605,7 +605,9 @@ button {
 	}
 
 	.pages-h3 {
+		font-family: Georgia, "Times New Roman", Times, serif;
 		font-size: x-large;
+		font-style: italic;
 	}
 
 	.pages-h5 {
@@ -625,6 +627,11 @@ button {
 		font-size: small;
 		font-style: italic;
 		letter-spacing: 0.5px;
+	}
+
+	.pw-reqs {
+		font-size: 0.6em;
+		width: 60%;
 	}
 
 	ul {
