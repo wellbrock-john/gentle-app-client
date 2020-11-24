@@ -14,7 +14,8 @@ body {
 	background-image: linear-gradient(to bottom right, #aee4fa, #096f97);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
-	color: rgb(49, 49, 49);
+	color: black;
+	line-height: 1.5em;
 }
 
 code {

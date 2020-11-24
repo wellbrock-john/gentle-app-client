@@ -27,11 +27,11 @@ class LoginPage extends Component {
 	render() {
 		return (
 			<>
-				<section>
+				<section className="login-section">
 					<header role="banner">
 						<h1 className="login-greeting">Hello Friend,</h1>
 					</header>
-					<section>
+					<section className="login-section">
 						<header>
 							<h4>Let's Get You Into Your Space</h4>
 						</header>
@@ -74,6 +74,15 @@ class LoginPage extends Component {
 									</button>
 								</fieldset>
 							</form>
+							<div>
+								<p className="demo-creds">
+									Demo users:
+									<br />
+									Username: Demo
+									<br />
+									Password: P@ssword1234
+								</p>
+							</div>
 						</div>
 					</section>
 				</section>

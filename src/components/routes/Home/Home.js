@@ -16,7 +16,7 @@ class HomePage extends Component {
 					<h5>Welcome to your homepage</h5>
 				</header>
 				<hr className="rounded" />
-				<section>
+				<section className="home-section">
 					<div className="home-div">
 						<hr className="rounded-home-top" />
 						<h5 className="your-space">This Is Your Space</h5>

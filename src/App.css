@@ -120,11 +120,11 @@ footer a:visited {
 }
 
 footer a:link {
-	color: rgb(22, 22, 22);
+	color: black;
 }
 
 footer a:hover {
-	color: darkgreen;
+	color: aquamarine;
 }
 
 /* ----- General Sections/Divs ----- */
@@ -386,18 +386,14 @@ button {
 
 /* ----- Desktop Styling ----- */
 
-@media all and (min-width: 450px) {
+@media all and (min-width: 400px) {
 	html {
 		position: relative;
-		min-height: 110%;
+		min-height: -webkit-fill-available;
 	}
 
-	body {
-		min-height: 110%;
-	}
 	#root {
 		width: 100%;
-		min-height: 110%;
 	}
 
 	main {
@@ -407,7 +403,6 @@ button {
 		justify-content: center;
 		position: unset;
 		width: 50%;
-		min-height: 110%;
 	}
 
 	h3 {
@@ -469,6 +464,12 @@ button {
 		margin-top: 10px;
 		height: 3.5rem;
 		width: 7rem;
+	}
+
+	button:hover {
+		color: aquamarine;
+		cursor: pointer;
+		background-color: #36424e;
 	}
 
 	textarea {
@@ -544,6 +545,18 @@ button {
 		right: 0.5rem;
 	}
 
+	.logout-button:hover {
+		color: aquamarine;
+		cursor: pointer;
+		background-color: #36424e;
+	}
+
+	.back-button:hover {
+		color: aquamarine;
+		cursor: pointer;
+		background-color: #36424e;
+	}
+
 	.rounded {
 		width: 60%;
 		margin-top: 40px;
@@ -556,13 +569,25 @@ button {
 		margin-top: 13%;
 	}
 
+	.home-section {
+		margin-top: 1.5em;
+	}
+
 	.form-section {
-		margin-top: 10%;
+		margin-top: 0;
+	}
+
+	.login-section {
+		margin-top: 3.5em;
 	}
 
 	.login-greeting {
 		font-size: 35px;
 		margin-bottom: 1%;
+	}
+
+	.demo-creds {
+		font-size: large;
 	}
 
 	.pages-div {
