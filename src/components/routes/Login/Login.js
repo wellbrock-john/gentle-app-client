@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Context from "../../../Context";
 import AuthAPIService from "../../../services/auth-api-service";
 import TokenService from "../../../services/token-service";
+import { Link } from "react-router-dom";
 
 class LoginPage extends Component {
 	static contextType = Context;
@@ -76,12 +77,23 @@ class LoginPage extends Component {
 							</form>
 							<div>
 								<p className="demo-creds">
-									Demo users:
+									Demo account users, please use the following credentials:
 									<br />
 									Username: Demo
 									<br />
 									Password: P@ssword1234
 								</p>
+							</div>
+							<div>
+								<p className="signup-re-route">
+									If you do not have an account and wish to create one then
+									please sign up here:
+								</p>
+								<Link to={"/signup"}>
+									<button>
+										<span>Signup</span>
+									</button>
+								</Link>
 							</div>
 						</div>
 					</section>
