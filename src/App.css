@@ -680,3 +680,9 @@ button {
 		width: 175%;
 	}
 }
+
+@-moz-document url-prefix() {
+	html {
+		min-height: 120%;
+	}
+}
