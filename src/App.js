@@ -11,6 +11,7 @@ import SignUp from "./components/routes/Signup/Signup";
 import Treasure from "./components/routes/Treasure/Treasure";
 import Vent from "./components/routes/Vent/Vent";
 import Context from "./Context";
+import { isThisSecond } from "date-fns";
 
 const { API_ENDPOINT } = require("./config");
 
@@ -52,35 +53,40 @@ class App extends Component {
 				showPositiveStatements: false,
 			});
 		},
+		getData: () => {
+			const options = {
+				method: "GET",
+				headers: {
+					Authorization: `Bearer ${TokenService.getAuthToken()}`,
+					Accept: "application/json",
+				},
+			};
+			fetch(`${API_ENDPOINT}/api/notes`, options)
+				.then((res) => {
+					if (!res.ok) {
+						return Promise.reject(res.statusText);
+					}
+					return res.json();
+				})
+				.then((notes) => this.setState({ notes }));
+
+			fetch(`${API_ENDPOINT}/api/positivestatements`, options)
+				.then((res) => {
+					if (!res.ok) {
+						return Promise.reject(res.statusText);
+					}
+					return res.json();
+				})
+				.then((positivestatements) => {
+					this.setState({ positivestatements });
+				});
+		},
 	};
 
 	componentDidMount() {
-		const options = {
-			method: "GET",
-			headers: {
-				Authorization: `Bearer ${TokenService.getAuthToken()}`,
-				Accept: "application/json",
-			},
-		};
-		fetch(`${API_ENDPOINT}/api/notes`, options)
-			.then((res) => {
-				if (!res.ok) {
-					return Promise.reject(res.statusText);
-				}
-				return res.json();
-			})
-			.then((notes) => this.setState({ notes }));
-
-		fetch(`${API_ENDPOINT}/api/positivestatements`, options)
-			.then((res) => {
-				if (!res.ok) {
-					return Promise.reject(res.statusText);
-				}
-				return res.json();
-			})
-			.then((positivestatements) => {
-				this.setState({ positivestatements });
-			});
+		if (TokenService.hasAuthToken()) {
+			this.state.getData();
+		}
 	}
 
 	render() {

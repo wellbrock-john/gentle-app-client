@@ -18,6 +18,7 @@ class LoginPage extends Component {
 		AuthAPIService.loginUser(user)
 			.then((loginResponse) => {
 				TokenService.saveAuthToken(loginResponse.authToken);
+				this.context.getData();
 				this.props.history.push("/positivestatements");
 			})
 			.catch((res) => {
