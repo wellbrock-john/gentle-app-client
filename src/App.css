@@ -4,7 +4,8 @@
 
 /* ----- General ----- */
 html {
-	min-height: -webkit-fill-available;
+	min-height: 100vh;
+	min-width: 100vw;
 	position: relative;
 }
 
@@ -104,11 +105,7 @@ li {
 }
 
 .footer {
-	margin-top: 40px;
-	left: 0;
-	bottom: 0;
 	width: 100%;
-	position: absolute;
 }
 
 footer a {
@@ -389,7 +386,8 @@ button {
 @media all and (min-width: 500px) {
 	html {
 		position: relative;
-		min-height: -webkit-fill-available;
+		min-height: 100vh;
+		min-width: 100vw;
 	}
 
 	#root {
@@ -449,11 +447,7 @@ button {
 	}
 
 	.footer {
-		margin-top: 40px;
-		left: 0;
-		bottom: 0;
 		width: 100%;
-		position: absolute;
 	}
 
 	footer a {
@@ -683,6 +677,7 @@ button {
 
 @-moz-document url-prefix() {
 	html {
-		min-height: 120%;
+		min-height: 100vh;
+		min-width: 100vw;
 	}
 }
