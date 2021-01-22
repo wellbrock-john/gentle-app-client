@@ -13,13 +13,7 @@ class LandingPage extends Component {
 				<section className="landing-section">
 					<div className="landing-description">
 						<p>
-							Hello and welcome to Gentle, an application made for anyone and
-							everyone. This is a place for people, just like you and me, to
-							come practice self-love, let out their frustrations or free their
-							minds of clutter, through the use of a welcoming and comfortable
-							to use, note taking page. Gentle offers a secure, safe space for
-							users to express themselves. Come sign up to get started or, if
-							you already have an account, please log in.
+							Gentle is a place for anyone to come practice self care in regards to mental health. 
 						</p>
 					</div>
 					<header>
